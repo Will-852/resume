@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Lau — E-commerce & Marketing Coordinator</title>
+  <meta name="description" content="Resume of Lau Wai Lung William — E-commerce & Marketing Coordinator based in Hong Kong">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #F5F0EB;
+      --sidebar-bg:#EDE6DC;
+      --text:      #3A3632;
+      --heading:   #2C2825;
+      --accent:    #8B7D6B;
+      --muted:     #B8A99A;
+      --line:      #D4C9BC;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(139,125,107,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(184,169,154,0.04) 0%, transparent 50%);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .resume {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+      box-shadow: 0 0 60px rgba(44,40,37,0.04);
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      background-color: var(--sidebar-bg);
+      background-image:
+        linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 50%);
+      padding: 56px 40px 48px;
+      position: relative;
+    }
+
+    .sidebar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent 5%,
+        var(--line) 20%,
+        var(--line) 80%,
+        transparent 95%
+      );
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      margin-bottom: 24px;
+      filter: grayscale(20%) contrast(0.95);
+      border: 2px solid var(--line);
+    }
+
+    .name-zh {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: 0.12em;
+      margin-bottom: 2px;
+    }
+
+    .name-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 36px;
+    }
+
+    .sidebar-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--heading);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .contact-list a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-list a:hover {
+      border-bottom-color: var(--muted);
+    }
+
+    .skill-group {
+      margin-bottom: 18px;
+    }
+
+    .skill-group-title {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
+      font-size: 0.76rem;
+      font-weight: 400;
+      color: var(--text);
+      background: rgba(255,255,255,0.35);
+      border: none;
+      border-radius: 2px;
+      padding: 4px 11px;
+      letter-spacing: 0.01em;
+    }
+
+    .language-list {
+      list-style: none;
+    }
+
+    .language-list li {
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .language-level {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* ── Main Content ── */
+    .main {
+      padding: 56px 52px 48px;
+      background-color: var(--bg);
+    }
+
+    .section {
+      margin-bottom: 44px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--heading);
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.85;
+      max-width: 600px;
+    }
+
+    .experience-item {
+      margin-bottom: 28px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--heading);
+    }
+
+    .exp-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .exp-title-role {
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-bullets li {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      padding-left: 16px;
+      position: relative;
+      max-width: 620px;
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--muted);
+    }
+
+    .edu-item {
+      margin-bottom: 16px;
+    }
+
+    .edu-school {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--heading);
+      margin-bottom: 2px;
+    }
+
+    .edu-degree {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .edu-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .resume {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        padding: 40px 28px 32px;
+      }
+
+      .sidebar::after {
+        width: 100%;
+        height: 1px;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+          to right,
+          transparent 5%,
+          var(--line) 20%,
+          var(--line) 80%,
+          transparent 95%
+        );
+      }
+
+      .main {
+        padding: 36px 28px 40px;
+      }
+
+      .exp-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        background: white;
+        font-size: 11pt;
+      }
+
+      .resume {
+        grid-template-columns: 32% 68%;
+        max-width: 100%;
+        box-shadow: none;
+        min-height: auto;
+      }
+
+      .sidebar {
+        background-color: #f5f2ee;
+        padding: 32px 24px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .main {
+        padding: 32px 36px;
+      }
+
+      .section {
+        animation: none;
+        break-inside: avoid;
+      }
+
+      .section-heading {
+        break-after: avoid;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <img src="photo.jpg" alt="William Lau" class="photo">
+      <div class="name-zh">劉煒龍</div>
+      <div class="name-en">Lau Wai Lung William</div>
+      <div class="title">E-commerce &amp; Marketing<br>Coordinator</div>
+
+      <div class="sidebar-section">
+        <h2 class="sidebar-heading">Contact</h2>
+        <ul class="contact-list">
+          <li>Hong Kong</li>
+          <li>5599 5267</li>
+          <li><a href="mailto:will678qwe@gmail.com">will678qwe@gmail.com</a></li>
+          <li><a href="https://github.com/Will-852" target="_blank" rel="noopener">github.com/Will-852</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h2 class="sidebar-heading">Skills</h2>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Marketing &amp; Advertising</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Meta Ads</span>
+            <span class="skill-tag">Google Ads</span>
+            <span class="skill-tag">Campaign Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">E-commerce</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Shopify</span>
+            <span class="skill-tag">Shopline</span>
+            <span class="skill-tag">Store Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Content &amp; Design</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Product Photography</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">AI &amp; Tech</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Claude Code</span>
+            <span class="skill-tag">Cursor</span>
+            <span class="skill-tag">LLM Workflows</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">Notion</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Java</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2 class="sidebar-heading">Languages</h2>
+        <ul class="language-list">
+          <li>
+            <span>廣東話 Cantonese</span>
+            <span class="language-level">Native</span>
+          </li>
+          <li>
+            <span>普通話 Mandarin</span>
+            <span class="language-level">Fluent</span>
+          </li>
+          <li>
+            <span>English</span>
+            <span class="language-level">Fluent</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main">
+
+      <section class="section">
+        <h2 class="section-heading">Profile</h2>
+        <p class="profile-text">
+          A self-driven and adaptable marketing professional with 3 years of hands-on experience across retail, e-commerce, and digital advertising. Quick to learn and fast to execute — from running Meta &amp; Google Ads campaigns to managing online storefronts and leveraging the latest AI tools. Thrives in fast-paced environments and brings both creative thinking and practical execution to every role.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">Experience</h2>
+        <div class="experience-item">
+          <div class="exp-header">
+            <span class="exp-company">Home Decor Centre</span>
+            <span class="exp-date">Mar 2023 — Mar 2026</span>
+          </div>
+          <div class="exp-title-role">E-commerce &amp; Marketing Coordinator · Hong Kong</div>
+          <ul class="exp-bullets">
+            <li>Delivered front-line customer service, maintaining high satisfaction standards in a fast-paced retail environment</li>
+            <li>Managed warehouse inventory and stock operations, ensuring accurate records and efficient fulfilment</li>
+            <li>Planned and executed digital marketing campaigns via Meta Ads and Google Ads, driving online traffic and sales</li>
+            <li>Operated and maintained e-commerce storefronts on Shopify and Shopline — including product listings, page design, and daily platform management</li>
+            <li>Produced product photography and promotional visual content for online channels</li>
+            <li>Leveraged AI tools (Cursor, Claude Code, LLM workflows) to streamline operational efficiency</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">Education</h2>
+        <div class="edu-item">
+          <div class="edu-school">The Hong Kong University of Science and Technology</div>
+          <div class="edu-degree">BSc Science (Mathematics)</div>
+          <div class="edu-date">2019 — 2021</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
