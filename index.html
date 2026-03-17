@@ -22,10 +22,7 @@
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
@@ -36,7 +33,7 @@
       padding: 40px 16px 60px;
     }
 
-    /* ── A4 — exactly one page ── */
+    /* ── A4 one page ── */
     .resume {
       display: grid;
       grid-template-columns: 34% 66%;
@@ -50,7 +47,7 @@
     /* ── Sidebar ── */
     .sidebar {
       background-color: var(--sidebar-bg);
-      padding: 44px 34px 40px;
+      padding: 40px 34px 40px;
       position: relative;
       overflow: hidden;
     }
@@ -64,11 +61,11 @@
     }
 
     .photo {
-      width: 100px; height: 100px;
+      width: 96px; height: 96px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       filter: grayscale(15%) contrast(0.96);
       border: 2px solid var(--line);
     }
@@ -86,7 +83,7 @@
       font-size: 1.1rem; font-weight: 400;
       color: var(--accent);
       letter-spacing: 0.08em;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .title {
@@ -95,10 +92,10 @@
       letter-spacing: 0.10em;
       text-transform: uppercase;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
-    .sidebar-section { margin-bottom: 26px; }
+    .sidebar-section { margin-bottom: 24px; }
 
     .sidebar-heading {
       font-family: 'Cormorant Garamond', serif;
@@ -106,26 +103,23 @@
       color: var(--heading);
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
       padding-bottom: 6px;
       border-bottom: 1px solid var(--line);
     }
 
     .contact-list { list-style: none; }
     .contact-list li {
-      font-size: 0.9rem;
-      color: var(--text);
-      margin-bottom: 8px;
+      font-size: 0.9rem; color: var(--text); margin-bottom: 7px;
     }
     .contact-list a {
-      color: var(--text);
-      text-decoration: none;
+      color: var(--text); text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.25s, color 0.25s;
     }
     .contact-list a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
-    .skill-group { margin-bottom: 14px; }
+    .skill-group { margin-bottom: 13px; }
     .skill-group-title {
       font-size: 0.70rem; font-weight: 600;
       color: var(--accent-deep);
@@ -154,11 +148,9 @@
 
     .language-list { list-style: none; }
     .language-list li {
-      font-size: 0.9rem;
-      color: var(--text);
+      font-size: 0.9rem; color: var(--text);
       margin-bottom: 7px;
-      display: flex;
-      justify-content: space-between;
+      display: flex; justify-content: space-between;
     }
     .language-level { color: var(--muted); font-size: 0.76rem; }
 
@@ -171,7 +163,7 @@
     }
 
     .section {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
       counter-increment: section-counter;
     }
 
@@ -195,9 +187,7 @@
     }
 
     .profile-text {
-      font-size: 1.02rem;
-      color: var(--text);
-      line-height: 1.85;
+      font-size: 1.02rem; color: var(--text); line-height: 1.85;
     }
 
     /* ── Experience timeline ── */
@@ -221,46 +211,33 @@
     }
 
     .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 3px;
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: 8px; margin-bottom: 3px;
     }
 
     .exp-company {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem; font-weight: 600;
-      color: var(--heading);
+      font-size: 1.2rem; font-weight: 600; color: var(--heading);
     }
 
-    .exp-date {
-      font-size: 0.78rem; color: var(--muted);
-      letter-spacing: 0.04em; white-space: nowrap;
-    }
+    .exp-date { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
 
     .exp-title-role {
       font-size: 0.83rem; font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 12px;
+      color: var(--accent); margin-bottom: 12px;
     }
 
     .exp-bullets { list-style: none; padding: 0; }
     .exp-bullets li {
-      font-size: 0.975rem;
-      line-height: 1.8;
+      font-size: 0.975rem; line-height: 1.8;
       margin-bottom: 10px;
-      padding-left: 14px;
-      position: relative;
-      color: var(--text);
+      padding-left: 14px; position: relative; color: var(--text);
     }
     .exp-bullets li::before {
-      content: '';
-      position: absolute;
+      content: ''; position: absolute;
       left: 0; top: 10px;
       width: 4px; height: 4px;
-      border-radius: 50%;
-      background-color: var(--muted);
+      border-radius: 50%; background-color: var(--muted);
     }
 
     /* ── Education ── */
@@ -276,10 +253,7 @@
     /* ── Print ── */
     @media print {
       body { background: white; padding: 0; }
-      .resume {
-        width: 210mm; height: 297mm;
-        box-shadow: none;
-      }
+      .resume { width: 210mm; height: 297mm; box-shadow: none; }
       .sidebar {
         background-color: #ede6dc;
         -webkit-print-color-adjust: exact;
@@ -306,7 +280,7 @@
       <div class="sidebar-section">
         <h2 class="sidebar-heading">Contact</h2>
         <ul class="contact-list">
-          <li>Hong Kong</li>
+          <li>Hong Kong · Age 25</li>
           <li><a href="mailto:will678qwe@gmail.com">will678qwe@gmail.com</a></li>
           <li><a href="https://github.com/Will-852" target="_blank" rel="noopener">github.com/Will-852</a></li>
         </ul>
@@ -346,19 +320,11 @@
         </div>
 
         <div class="skill-group">
-          <div class="skill-group-title">Content &amp; Design</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Product Photography</span>
-            <span class="skill-tag">Canva</span>
-            <span class="skill-tag">Figma</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
           <div class="skill-group-title">Tools</div>
           <div class="skill-tags">
             <span class="skill-tag">MS Office</span>
             <span class="skill-tag">Notion</span>
+            <span class="skill-tag">Figma</span>
             <span class="skill-tag">HTML / CSS</span>
           </div>
         </div>
