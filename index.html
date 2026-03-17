@@ -21,7 +21,6 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
     body {
@@ -49,7 +48,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .sidebar::after {
       content: '';
       position: absolute;
@@ -75,7 +73,6 @@
       letter-spacing: 0.12em;
       margin-bottom: 2px;
     }
-
     .name-en {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem; font-weight: 400;
@@ -83,7 +80,6 @@
       letter-spacing: 0.08em;
       margin-bottom: 12px;
     }
-
     .title {
       font-size: 0.72rem; font-weight: 600;
       color: var(--accent-deep);
@@ -94,7 +90,6 @@
     }
 
     .sidebar-section { margin-bottom: 24px; }
-
     .sidebar-heading {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem; font-weight: 600;
@@ -123,9 +118,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-
     .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-
     .skill-tag {
       font-size: 0.76rem; font-weight: 400;
       color: var(--text);
@@ -134,7 +127,6 @@
       border-radius: 2px;
       padding: 2px 9px;
     }
-
     .skill-tag.highlight {
       background: rgba(122,106,87,0.10);
       border: 1px solid rgba(122,106,87,0.40);
@@ -178,16 +170,12 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .profile-text { font-size: 1.02rem; color: var(--text); line-height: 1.85; }
-
     .experience-list {
       border-left: 1px solid var(--line);
       margin-left: 6px;
       padding-left: 22px;
     }
-
     .experience-item { position: relative; }
-
     .experience-item::before {
       content: '';
       position: absolute;
@@ -203,14 +191,11 @@
       display: flex; justify-content: space-between;
       align-items: baseline; gap: 8px; margin-bottom: 3px;
     }
-
     .exp-company {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem; font-weight: 600; color: var(--heading);
     }
-
     .exp-date { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
-
     .exp-title-role {
       font-size: 0.83rem; font-weight: 500;
       color: var(--accent); margin-bottom: 12px;
@@ -328,9 +313,12 @@
       <section class="section">
         <div class="section-label">Profile</div>
         <h2 class="section-heading">About</h2>
-        <p class="profile-text">
-          Marketing professional with 3 years of e-commerce and digital advertising experience, now building at the intersection of AI and operations. Exploring RAG pipelines and LoRA fine-tuning — comfortable owning projects end-to-end, from campaign strategy to shipping the code behind it.
-        </p>
+        <ul class="exp-bullets">
+          <li>3 years in e-commerce and digital advertising — Meta Ads, Google Ads, Shopify, Shopline</li>
+          <li>Building at the intersection of AI and business operations using Python and LLM workflows</li>
+          <li>Exploring RAG pipelines and LoRA fine-tuning for domain-specific AI systems</li>
+          <li>Comfortable owning projects end-to-end — from campaign strategy to shipping the code</li>
+        </ul>
       </section>
 
       <section class="section">
