@@ -33,7 +33,6 @@
       padding: 40px 16px 60px;
     }
 
-    /* ── A4 one page ── */
     .resume {
       display: grid;
       grid-template-columns: 34% 66%;
@@ -44,7 +43,6 @@
       box-shadow: 0 4px 40px rgba(0,0,0,0.18);
     }
 
-    /* ── Sidebar ── */
     .sidebar {
       background-color: var(--sidebar-bg);
       padding: 40px 34px 40px;
@@ -109,9 +107,7 @@
     }
 
     .contact-list { list-style: none; }
-    .contact-list li {
-      font-size: 0.9rem; color: var(--text); margin-bottom: 7px;
-    }
+    .contact-list li { font-size: 0.9rem; color: var(--text); margin-bottom: 7px; }
     .contact-list a {
       color: var(--text); text-decoration: none;
       border-bottom: 1px solid transparent;
@@ -154,7 +150,6 @@
     }
     .language-level { color: var(--muted); font-size: 0.76rem; }
 
-    /* ── Main ── */
     .main {
       padding: 44px 46px 40px;
       background-color: var(--bg);
@@ -162,10 +157,7 @@
       overflow: hidden;
     }
 
-    .section {
-      margin-bottom: 30px;
-      counter-increment: section-counter;
-    }
+    .section { margin-bottom: 30px; counter-increment: section-counter; }
 
     .section-label {
       font-size: 0.65rem; font-weight: 600;
@@ -186,11 +178,8 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .profile-text {
-      font-size: 1.02rem; color: var(--text); line-height: 1.85;
-    }
+    .profile-text { font-size: 1.02rem; color: var(--text); line-height: 1.85; }
 
-    /* ── Experience timeline ── */
     .experience-list {
       border-left: 1px solid var(--line);
       margin-left: 6px;
@@ -240,7 +229,6 @@
       border-radius: 50%; background-color: var(--muted);
     }
 
-    /* ── Education ── */
     .edu-item { margin-bottom: 12px; }
     .edu-school {
       font-family: 'Cormorant Garamond', serif;
@@ -250,7 +238,6 @@
     .edu-degree { font-size: 0.95rem; color: var(--text); }
     .edu-date   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
-    /* ── Print ── */
     @media print {
       body { background: white; padding: 0; }
       .resume { width: 210mm; height: 297mm; box-shadow: none; }
@@ -270,7 +257,6 @@
 <body>
   <div class="resume">
 
-    <!-- ── Sidebar ── -->
     <aside class="sidebar">
       <img src="photo.jpg" alt="William Lau" class="photo">
       <div class="name-zh">劉煒龍</div>
@@ -296,8 +282,6 @@
             <span class="skill-tag highlight">LoRA Fine-tuning</span>
             <span class="skill-tag">Python</span>
             <span class="skill-tag">LLM Workflows</span>
-            <span class="skill-tag">Claude Code</span>
-            <span class="skill-tag">Cursor</span>
           </div>
         </div>
 
@@ -324,7 +308,6 @@
           <div class="skill-tags">
             <span class="skill-tag">MS Office</span>
             <span class="skill-tag">Notion</span>
-            <span class="skill-tag">Figma</span>
             <span class="skill-tag">HTML / CSS</span>
           </div>
         </div>
@@ -340,7 +323,6 @@
       </div>
     </aside>
 
-    <!-- ── Main ── -->
     <main class="main">
 
       <section class="section">
