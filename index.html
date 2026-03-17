@@ -46,7 +46,7 @@
     /* ── Sidebar ── */
     .sidebar {
       background-color: var(--sidebar-bg);
-      padding: 40px 34px 40px;
+      padding: 38px 34px 38px;
       position: relative;
       overflow: hidden;
     }
@@ -59,44 +59,44 @@
     }
 
     .photo {
-      width: 96px; height: 96px;
+      width: 92px; height: 92px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       filter: grayscale(15%) contrast(0.96);
       border: 2px solid var(--line);
     }
 
     .name-zh {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.85rem; font-weight: 500;
+      font-size: 1.8rem; font-weight: 500;
       color: var(--heading); letter-spacing: 0.12em; margin-bottom: 2px;
     }
     .name-en {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; font-weight: 400;
-      color: var(--accent); letter-spacing: 0.08em; margin-bottom: 12px;
+      font-size: 1.05rem; font-weight: 400;
+      color: var(--accent); letter-spacing: 0.08em; margin-bottom: 10px;
     }
     .title {
-      font-size: 0.72rem; font-weight: 600;
+      font-size: 0.70rem; font-weight: 600;
       color: var(--accent-deep);
       letter-spacing: 0.10em; text-transform: uppercase;
-      line-height: 1.6; margin-bottom: 28px;
+      line-height: 1.6; margin-bottom: 24px;
     }
 
-    .sidebar-section { margin-bottom: 22px; }
+    .sidebar-section { margin-bottom: 20px; }
     .sidebar-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem; font-weight: 600;
+      font-size: 0.92rem; font-weight: 600;
       color: var(--heading); letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 10px; padding-bottom: 6px;
+      margin-bottom: 9px; padding-bottom: 5px;
       border-bottom: 1px solid var(--line);
     }
 
     .contact-list { list-style: none; }
-    .contact-list li { font-size: 0.95rem; color: var(--text); margin-bottom: 7px; }
+    .contact-list li { font-size: 0.92rem; color: var(--text); margin-bottom: 6px; }
     .contact-list a {
       color: var(--text); text-decoration: none;
       border-bottom: 1px solid transparent;
@@ -104,19 +104,19 @@
     }
     .contact-list a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
-    .skill-group { margin-bottom: 12px; }
+    .skill-group { margin-bottom: 11px; }
     .skill-group-title {
-      font-size: 0.70rem; font-weight: 600;
-      color: var(--accent-deep); margin-bottom: 5px;
+      font-size: 0.68rem; font-weight: 600;
+      color: var(--accent-deep); margin-bottom: 4px;
       letter-spacing: 0.05em; text-transform: uppercase;
     }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
     .skill-tag {
-      font-size: 0.78rem; font-weight: 400;
+      font-size: 0.75rem; font-weight: 400;
       color: var(--text);
       background: rgba(255,255,255,0.45);
       border: 1px solid transparent;
-      border-radius: 2px; padding: 2px 9px;
+      border-radius: 2px; padding: 2px 8px;
     }
     .skill-tag.highlight {
       background: rgba(122,106,87,0.10);
@@ -126,47 +126,47 @@
 
     .language-list { list-style: none; }
     .language-list li {
-      font-size: 0.95rem; color: var(--text);
-      margin-bottom: 7px;
+      font-size: 0.92rem; color: var(--text);
+      margin-bottom: 6px;
       display: flex; justify-content: space-between;
     }
-    .language-level { color: var(--muted); font-size: 0.8rem; }
+    .language-level { color: var(--muted); font-size: 0.78rem; }
 
     /* ── Main ── */
     .main {
-      padding: 44px 46px 40px;
+      padding: 42px 44px 38px;
       background-color: var(--bg);
       counter-reset: section-counter;
       overflow: hidden;
     }
 
-    .section { margin-bottom: 28px; counter-increment: section-counter; }
+    .section { margin-bottom: 26px; counter-increment: section-counter; }
 
     .section-label {
-      font-size: 0.65rem; font-weight: 600;
+      font-size: 0.63rem; font-weight: 600;
       color: var(--muted); letter-spacing: 0.14em;
-      text-transform: uppercase; margin-bottom: 4px;
+      text-transform: uppercase; margin-bottom: 3px;
     }
     .section-label::before { content: "0" counter(section-counter) " /  "; }
 
     .section-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem; font-weight: 500;
+      font-size: 1.5rem; font-weight: 500;
       color: var(--heading); letter-spacing: 0.04em;
-      margin-bottom: 14px; padding-bottom: 9px;
+      margin-bottom: 12px; padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
     }
 
     /* ── Experience timeline ── */
     .experience-list {
       border-left: 1px solid var(--line);
-      margin-left: 6px; padding-left: 22px;
+      margin-left: 6px; padding-left: 20px;
     }
     .experience-item { position: relative; }
     .experience-item::before {
       content: '';
       position: absolute;
-      left: -27px; top: 7px;
+      left: -25px; top: 7px;
       width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--accent);
@@ -176,41 +176,41 @@
 
     .exp-header {
       display: flex; justify-content: space-between;
-      align-items: baseline; gap: 8px; margin-bottom: 3px;
+      align-items: baseline; gap: 8px; margin-bottom: 2px;
     }
     .exp-company {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem; font-weight: 600; color: var(--heading);
+      font-size: 1.15rem; font-weight: 600; color: var(--heading);
     }
-    .exp-date { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
+    .exp-date { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.03em; white-space: nowrap; }
     .exp-title-role {
-      font-size: 0.875rem; font-weight: 500;
-      color: var(--accent); margin-bottom: 11px;
+      font-size: 0.84rem; font-weight: 500;
+      color: var(--accent); margin-bottom: 10px;
     }
 
-    /* 12pt = 16px = 1rem */
+    /* 12pt = 1rem = 16px */
     .exp-bullets { list-style: none; padding: 0; }
     .exp-bullets li {
       font-size: 1rem;
-      line-height: 1.78;
-      margin-bottom: 9px;
-      padding-left: 14px; position: relative; color: var(--text);
+      line-height: 1.72;
+      margin-bottom: 8px;
+      padding-left: 13px; position: relative; color: var(--text);
     }
     .exp-bullets li::before {
       content: ''; position: absolute;
-      left: 0; top: 10px;
+      left: 0; top: 9px;
       width: 4px; height: 4px;
       border-radius: 50%; background-color: var(--muted);
     }
 
-    .edu-item { margin-bottom: 12px; }
+    .edu-item { margin-bottom: 10px; }
     .edu-school {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; font-weight: 600;
+      font-size: 1.08rem; font-weight: 600;
       color: var(--heading); margin-bottom: 2px;
     }
     .edu-degree { font-size: 1rem; color: var(--text); }
-    .edu-date   { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .edu-date   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
     /* ── Print ── */
     @media print {
@@ -249,7 +249,6 @@
 
       <div class="sidebar-section">
         <h2 class="sidebar-heading">Skills</h2>
-
         <div class="skill-group">
           <div class="skill-group-title">AI &amp; Development</div>
           <div class="skill-tags">
@@ -259,7 +258,6 @@
             <span class="skill-tag">LLM Workflows</span>
           </div>
         </div>
-
         <div class="skill-group">
           <div class="skill-group-title">Marketing &amp; Advertising</div>
           <div class="skill-tags">
@@ -268,7 +266,6 @@
             <span class="skill-tag">Campaign Management</span>
           </div>
         </div>
-
         <div class="skill-group">
           <div class="skill-group-title">E-commerce</div>
           <div class="skill-tags">
@@ -277,7 +274,6 @@
             <span class="skill-tag">Store Management</span>
           </div>
         </div>
-
         <div class="skill-group">
           <div class="skill-group-title">Tools</div>
           <div class="skill-tags">
@@ -305,9 +301,9 @@
         <h2 class="section-heading">About</h2>
         <ul class="exp-bullets">
           <li>3 years in e-commerce and digital advertising — Meta Ads, Google Ads, Shopify, Shopline</li>
-          <li>Building at the intersection of AI and business operations using Python and LLM workflows</li>
+          <li>Building AI-powered operations tools with Python and LLM workflows</li>
           <li>Exploring RAG pipelines and LoRA fine-tuning for domain-specific AI systems</li>
-          <li>Comfortable owning projects end-to-end — from campaign strategy to shipping the code</li>
+          <li>Owns projects end-to-end — from campaign strategy to shipping the code</li>
         </ul>
       </section>
 
@@ -322,10 +318,10 @@
             </div>
             <div class="exp-title-role">E-commerce &amp; Marketing Coordinator · Hong Kong</div>
             <ul class="exp-bullets">
-              <li>Planned and executed Meta Ads and Google Ads campaigns — managing targeting, creative, and performance reporting end-to-end</li>
-              <li>Operated Shopify and Shopline storefronts including product listings, page design, and promotional scheduling</li>
-              <li>Built and deployed an internal invoice tool (HTML/JS) that replaced manual processes and cut invoicing time for the team</li>
-              <li>Applied Claude Code and LLM workflows to automate repetitive tasks across marketing and fulfilment operations</li>
+              <li>Planned and executed Meta &amp; Google Ads campaigns — targeting, creative, and performance reporting</li>
+              <li>Managed Shopify and Shopline storefronts — listings, page design, and promotional scheduling</li>
+              <li>Built an internal invoice tool (HTML/JS) that cut team invoicing time significantly</li>
+              <li>Used LLM workflows to automate repetitive marketing and fulfilment tasks</li>
             </ul>
           </div>
         </div>
