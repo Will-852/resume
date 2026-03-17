@@ -103,24 +103,12 @@
     .contact-list a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
     /* ── Skill groups ── */
-    .skill-group { margin-bottom: 14px; }
-
+    .skill-group { margin-bottom: 11px; }
     .skill-group-title {
-      font-size: 0.67rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      margin-bottom: 8px; padding: 2px 8px;
-      border-radius: 2px; display: inline-block;
+      font-size: 0.68rem; font-weight: 600;
+      color: var(--accent-deep); margin-bottom: 5px;
+      letter-spacing: 0.05em; text-transform: uppercase;
     }
-    .skill-group-title.proficient {
-      color: var(--bg);
-      background: var(--accent);
-    }
-    .skill-group-title.learning {
-      color: var(--accent-deep);
-      background: rgba(122,106,87,0.15);
-      border: 1px solid rgba(122,106,87,0.30);
-    }
-
     .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
     .skill-tag {
       font-size: 0.78rem; font-weight: 400;
@@ -130,10 +118,11 @@
       border-radius: 2px;
       padding: 3px 10px;
     }
-    .skill-tag.dim {
+    .skill-tag.highlight {
+      background: rgba(122,106,87,0.12);
+      border: 1px solid rgba(122,106,87,0.45);
       color: var(--accent-deep);
-      background: rgba(122,106,87,0.08);
-      border: 1px solid rgba(122,106,87,0.25);
+      font-weight: 500;
     }
 
     .language-list { list-style: none; }
@@ -174,7 +163,8 @@
     }
     .experience-item { position: relative; }
     .experience-item::before {
-      content: ''; position: absolute;
+      content: '';
+      position: absolute;
       left: -25px; top: 7px;
       width: 8px; height: 8px;
       border-radius: 50%;
@@ -223,7 +213,7 @@
       body { background: white; padding: 0; }
       .resume { width: 210mm; height: 297mm; box-shadow: none; }
       .sidebar { background-color: #ede6dc; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .skill-group-title.proficient, .skill-group-title.learning, .experience-item::before {
+      .skill-tag.highlight, .experience-item::before {
         -webkit-print-color-adjust: exact; print-color-adjust: exact;
       }
       a { text-decoration: none; color: var(--text); }
@@ -252,23 +242,29 @@
         <h2 class="sidebar-heading">Skills</h2>
 
         <div class="skill-group">
-          <div class="skill-group-title proficient">Proficient</div>
+          <div class="skill-group-title">AI &amp; Development</div>
           <div class="skill-tags">
-            <span class="skill-tag">Meta Ads</span>
-            <span class="skill-tag">Google Ads</span>
-            <span class="skill-tag">Shopify</span>
-            <span class="skill-tag">Shopline</span>
-            <span class="skill-tag">Campaign Management</span>
-            <span class="skill-tag">LLM Workflows</span>
+            <span class="skill-tag highlight">LLM Workflows</span>
+            <span class="skill-tag highlight">RAG Pipeline</span>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">RAG Pipeline</span>
+            <span class="skill-tag">LoRA Fine-tuning</span>
           </div>
         </div>
 
         <div class="skill-group">
-          <div class="skill-group-title learning">Learning</div>
+          <div class="skill-group-title">Marketing &amp; Advertising</div>
           <div class="skill-tags">
-            <span class="skill-tag dim">LoRA Fine-tuning</span>
+            <span class="skill-tag">Meta Ads</span>
+            <span class="skill-tag">Google Ads</span>
+            <span class="skill-tag">Campaign Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">E-commerce</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Shopify</span>
+            <span class="skill-tag">Shopline</span>
           </div>
         </div>
       </div>
