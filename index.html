@@ -20,14 +20,11 @@
       --line:        #D4C9BC;
     }
 
-    *, *::before, *::after {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
@@ -39,21 +36,23 @@
       padding: 40px 16px 60px;
     }
 
-    /* ── A4 Page ── */
+    /* ── A4 — exactly one page ── */
     .resume {
       display: grid;
       grid-template-columns: 34% 66%;
       width: 794px;
-      min-height: 1123px;
+      height: 1123px;
       margin: 0 auto;
+      overflow: hidden;
       box-shadow: 0 4px 40px rgba(0,0,0,0.18);
     }
 
     /* ── Sidebar ── */
     .sidebar {
       background-color: var(--sidebar-bg);
-      padding: 48px 36px 48px;
+      padding: 44px 34px 40px;
       position: relative;
+      overflow: hidden;
     }
 
     .sidebar::after {
@@ -61,25 +60,22 @@
       position: absolute;
       top: 0; right: 0;
       width: 1px; height: 100%;
-      background: linear-gradient(
-        to bottom,
-        transparent 4%, var(--line) 15%, var(--line) 85%, transparent 96%
-      );
+      background: linear-gradient(to bottom, transparent 4%, var(--line) 15%, var(--line) 85%, transparent 96%);
     }
 
     .photo {
-      width: 110px; height: 110px;
+      width: 100px; height: 100px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       filter: grayscale(15%) contrast(0.96);
       border: 2px solid var(--line);
     }
 
     .name-zh {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem; font-weight: 500;
+      font-size: 1.85rem; font-weight: 500;
       color: var(--heading);
       letter-spacing: 0.12em;
       margin-bottom: 2px;
@@ -87,31 +83,31 @@
 
     .name-en {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 400;
+      font-size: 1.1rem; font-weight: 400;
       color: var(--accent);
       letter-spacing: 0.08em;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .title {
-      font-size: 0.75rem; font-weight: 600;
+      font-size: 0.72rem; font-weight: 600;
       color: var(--accent-deep);
       letter-spacing: 0.10em;
       text-transform: uppercase;
       line-height: 1.6;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
     }
 
-    .sidebar-section { margin-bottom: 32px; }
+    .sidebar-section { margin-bottom: 26px; }
 
     .sidebar-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem; font-weight: 600;
+      font-size: 0.95rem; font-weight: 600;
       color: var(--heading);
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 14px;
-      padding-bottom: 7px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -119,8 +115,7 @@
     .contact-list li {
       font-size: 0.9rem;
       color: var(--text);
-      margin-bottom: 9px;
-      line-height: 1.5;
+      margin-bottom: 8px;
     }
     .contact-list a {
       color: var(--text);
@@ -128,29 +123,26 @@
       border-bottom: 1px solid transparent;
       transition: border-color 0.25s, color 0.25s;
     }
-    .contact-list a:hover {
-      color: var(--accent-deep);
-      border-bottom-color: var(--accent);
-    }
+    .contact-list a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
-    .skill-group { margin-bottom: 16px; }
+    .skill-group { margin-bottom: 14px; }
     .skill-group-title {
-      font-size: 0.73rem; font-weight: 600;
+      font-size: 0.70rem; font-weight: 600;
       color: var(--accent-deep);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 
     .skill-tag {
-      font-size: 0.78rem; font-weight: 400;
+      font-size: 0.76rem; font-weight: 400;
       color: var(--text);
       background: rgba(255,255,255,0.45);
       border: 1px solid transparent;
       border-radius: 2px;
-      padding: 3px 10px;
+      padding: 2px 9px;
     }
 
     .skill-tag.highlight {
@@ -164,60 +156,48 @@
     .language-list li {
       font-size: 0.9rem;
       color: var(--text);
-      margin-bottom: 9px;
+      margin-bottom: 7px;
       display: flex;
       justify-content: space-between;
     }
-    .language-level { color: var(--muted); font-size: 0.78rem; }
+    .language-level { color: var(--muted); font-size: 0.76rem; }
 
-    /* ── Main Content ── */
+    /* ── Main ── */
     .main {
-      padding: 48px 46px 48px;
+      padding: 44px 46px 40px;
       background-color: var(--bg);
       counter-reset: section-counter;
+      overflow: hidden;
     }
 
     .section {
-      margin-bottom: 36px;
+      margin-bottom: 32px;
       counter-increment: section-counter;
-      animation: fadeUp 0.5s ease both;
-    }
-    .section:nth-child(1) { animation-delay: 0.08s; }
-    .section:nth-child(2) { animation-delay: 0.16s; }
-    .section:nth-child(3) { animation-delay: 0.24s; }
-    .section:nth-child(4) { animation-delay: 0.32s; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
 
     .section-label {
-      font-size: 0.67rem; font-weight: 600;
+      font-size: 0.65rem; font-weight: 600;
       color: var(--muted);
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
-    .section-label::before {
-      content: "0" counter(section-counter) " /  ";
-    }
+    .section-label::before { content: "0" counter(section-counter) " /  "; }
 
     .section-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 500;
+      font-size: 1.55rem; font-weight: 500;
       color: var(--heading);
       letter-spacing: 0.04em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       padding-bottom: 9px;
       border-bottom: 1px solid var(--line);
     }
 
     .profile-text {
-      font-size: 1rem;
+      font-size: 1.02rem;
       color: var(--text);
-      line-height: 1.9;
-      font-weight: 400;
+      line-height: 1.85;
     }
 
     /* ── Experience timeline ── */
@@ -227,10 +207,7 @@
       padding-left: 22px;
     }
 
-    .experience-item {
-      margin-bottom: 24px;
-      position: relative;
-    }
+    .experience-item { position: relative; }
 
     .experience-item::before {
       content: '';
@@ -253,29 +230,26 @@
 
     .exp-company {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 600;
+      font-size: 1.2rem; font-weight: 600;
       color: var(--heading);
     }
 
     .exp-date {
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      white-space: nowrap;
+      font-size: 0.78rem; color: var(--muted);
+      letter-spacing: 0.04em; white-space: nowrap;
     }
 
     .exp-title-role {
       font-size: 0.83rem; font-weight: 500;
       color: var(--accent);
-      margin-bottom: 11px;
-      letter-spacing: 0.02em;
+      margin-bottom: 12px;
     }
 
     .exp-bullets { list-style: none; padding: 0; }
     .exp-bullets li {
-      font-size: 0.925rem;
-      line-height: 1.85;
-      margin-bottom: 9px;
+      font-size: 0.975rem;
+      line-height: 1.8;
+      margin-bottom: 10px;
       padding-left: 14px;
       position: relative;
       color: var(--text);
@@ -289,73 +263,28 @@
       background-color: var(--muted);
     }
 
-    /* ── Projects ── */
-    .project-item {
-      margin-bottom: 24px;
-      padding-left: 14px;
-      border-left: 2px solid var(--accent);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 3px;
-    }
-
-    .project-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 600;
-      color: var(--heading);
-    }
-
-    .project-link {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.25s, color 0.25s;
-      white-space: nowrap;
-    }
-    .project-link:hover {
-      color: var(--accent-deep);
-      border-bottom-color: var(--accent);
-    }
-
-    .project-stack {
-      font-size: 0.78rem; font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-
     /* ── Education ── */
-    .edu-item { margin-bottom: 14px; }
+    .edu-item { margin-bottom: 12px; }
     .edu-school {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem; font-weight: 600;
-      color: var(--heading);
-      margin-bottom: 2px;
+      color: var(--heading); margin-bottom: 2px;
     }
-    .edu-degree { font-size: 0.925rem; color: var(--text); }
+    .edu-degree { font-size: 0.95rem; color: var(--text); }
     .edu-date   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
     /* ── Print ── */
     @media print {
       body { background: white; padding: 0; }
       .resume {
-        width: 210mm; min-height: 297mm;
+        width: 210mm; height: 297mm;
         box-shadow: none;
-        grid-template-columns: 34% 66%;
       }
       .sidebar {
         background-color: #ede6dc;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      .section { animation: none; break-inside: avoid; }
-      .section-heading { break-after: avoid; }
       .experience-item::before {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -438,30 +367,21 @@
       <div class="sidebar-section">
         <h2 class="sidebar-heading">Languages</h2>
         <ul class="language-list">
-          <li>
-            <span>廣東話 Cantonese</span>
-            <span class="language-level">Native</span>
-          </li>
-          <li>
-            <span>普通話 Mandarin</span>
-            <span class="language-level">Fluent</span>
-          </li>
-          <li>
-            <span>English</span>
-            <span class="language-level">Fluent</span>
-          </li>
+          <li><span>廣東話 Cantonese</span><span class="language-level">Native</span></li>
+          <li><span>普通話 Mandarin</span><span class="language-level">Fluent</span></li>
+          <li><span>English</span><span class="language-level">Fluent</span></li>
         </ul>
       </div>
     </aside>
 
-    <!-- ── Main Content ── -->
+    <!-- ── Main ── -->
     <main class="main">
 
       <section class="section">
         <div class="section-label">Profile</div>
         <h2 class="section-heading">About</h2>
         <p class="profile-text">
-          Marketing professional with 3 years of hands-on e-commerce and digital advertising experience, now building at the intersection of AI and business operations. Shipped production tools using Python and Claude AI — including a live crypto trading bot and an offline invoice system used in daily retail operations. Currently deepening expertise in RAG pipelines and LoRA fine-tuning to build domain-specific AI systems. Comfortable owning a project end-to-end: from campaign strategy to writing and deploying the code behind it.
+          Marketing professional with 3 years of e-commerce and digital advertising experience, now building at the intersection of AI and operations. Exploring RAG pipelines and LoRA fine-tuning — comfortable owning projects end-to-end, from campaign strategy to shipping the code behind it.
         </p>
       </section>
 
@@ -476,44 +396,12 @@
             </div>
             <div class="exp-title-role">E-commerce &amp; Marketing Coordinator · Hong Kong</div>
             <ul class="exp-bullets">
-              <li>Planned and executed digital marketing campaigns across Meta Ads and Google Ads, managing full campaign lifecycle from targeting and creative to reporting and optimisation</li>
-              <li>Operated and grew e-commerce storefronts on Shopify and Shopline — owning product listings, page design, promotional scheduling, and day-to-day platform management</li>
-              <li>Produced product photography and visual content for online channels, maintaining consistent brand presentation across platforms</li>
-              <li>Built and deployed an internal invoice and order management tool (HTML/JS) to replace manual processes, cutting invoicing time significantly for the team</li>
-              <li>Applied AI tools (Claude Code, Cursor, LLM workflows) to automate repetitive operational tasks, improving team efficiency across marketing and fulfilment workflows</li>
-              <li>Managed warehouse inventory and stock operations, maintaining accurate records and supporting smooth order fulfilment</li>
+              <li>Planned and executed Meta Ads and Google Ads campaigns — managing targeting, creative, and performance reporting end-to-end</li>
+              <li>Operated Shopify and Shopline storefronts including product listings, page design, and promotional scheduling</li>
+              <li>Built and deployed an internal invoice tool (HTML/JS) that replaced manual processes and cut invoicing time for the team</li>
+              <li>Applied Claude Code and LLM workflows to automate repetitive tasks across marketing and fulfilment operations</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-label">Projects</div>
-        <h2 class="section-heading">Built</h2>
-
-        <div class="project-item">
-          <div class="project-header">
-            <span class="project-name">AXC Trading Bot</span>
-            <a href="https://github.com/Will-852/AXC-TradingBot" target="_blank" rel="noopener" class="project-link">github.com/Will-852/AXC-TradingBot</a>
-          </div>
-          <div class="project-stack">Python · Claude AI · Telegram Bot API · RAG</div>
-          <ul class="exp-bullets">
-            <li>Built a live crypto trading system with real-time signal analysis, automated trade execution, and Telegram-based control interface</li>
-            <li>Integrated Claude AI for market interpretation and trade decision support; applying RAG architecture to incorporate evolving market context into model reasoning</li>
-            <li>Designed modular architecture covering signal ingestion, risk management, and order routing — running as a persistent background service</li>
-          </ul>
-        </div>
-
-        <div class="project-item">
-          <div class="project-header">
-            <span class="project-name">HDC Invoice System</span>
-            <a href="https://github.com/Will-852/hdc-invoice" target="_blank" rel="noopener" class="project-link">github.com/Will-852/hdc-invoice</a>
-          </div>
-          <div class="project-stack">HTML · JavaScript · CSS · Excel Export</div>
-          <ul class="exp-bullets">
-            <li>Built a zero-dependency offline invoice generator for Shopline/Shopify merchants — no server, no install, runs entirely in the browser</li>
-            <li>Supports CSV order import, customer database, print-ready layout, and Excel export; deployed and actively used in retail operations at Home Decor Centre</li>
-          </ul>
         </div>
       </section>
 
