@@ -32,6 +32,7 @@
       padding: 40px 16px 60px;
     }
 
+    /* ── A4 one page ── */
     .resume {
       display: grid;
       grid-template-columns: 34% 66%;
@@ -42,6 +43,7 @@
       box-shadow: 0 4px 40px rgba(0,0,0,0.18);
     }
 
+    /* ── Sidebar ── */
     .sidebar {
       background-color: var(--sidebar-bg);
       padding: 40px 34px 40px;
@@ -69,40 +71,32 @@
     .name-zh {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.85rem; font-weight: 500;
-      color: var(--heading);
-      letter-spacing: 0.12em;
-      margin-bottom: 2px;
+      color: var(--heading); letter-spacing: 0.12em; margin-bottom: 2px;
     }
     .name-en {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem; font-weight: 400;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
+      color: var(--accent); letter-spacing: 0.08em; margin-bottom: 12px;
     }
     .title {
       font-size: 0.72rem; font-weight: 600;
       color: var(--accent-deep);
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      line-height: 1.6;
-      margin-bottom: 28px;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      line-height: 1.6; margin-bottom: 28px;
     }
 
-    .sidebar-section { margin-bottom: 24px; }
+    .sidebar-section { margin-bottom: 22px; }
     .sidebar-heading {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem; font-weight: 600;
-      color: var(--heading);
-      letter-spacing: 0.07em;
+      color: var(--heading); letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 11px;
-      padding-bottom: 6px;
+      margin-bottom: 10px; padding-bottom: 6px;
       border-bottom: 1px solid var(--line);
     }
 
     .contact-list { list-style: none; }
-    .contact-list li { font-size: 0.9rem; color: var(--text); margin-bottom: 7px; }
+    .contact-list li { font-size: 0.95rem; color: var(--text); margin-bottom: 7px; }
     .contact-list a {
       color: var(--text); text-decoration: none;
       border-bottom: 1px solid transparent;
@@ -110,38 +104,35 @@
     }
     .contact-list a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
-    .skill-group { margin-bottom: 13px; }
+    .skill-group { margin-bottom: 12px; }
     .skill-group-title {
       font-size: 0.70rem; font-weight: 600;
-      color: var(--accent-deep);
-      margin-bottom: 5px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      color: var(--accent-deep); margin-bottom: 5px;
+      letter-spacing: 0.05em; text-transform: uppercase;
     }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
     .skill-tag {
-      font-size: 0.76rem; font-weight: 400;
+      font-size: 0.78rem; font-weight: 400;
       color: var(--text);
       background: rgba(255,255,255,0.45);
       border: 1px solid transparent;
-      border-radius: 2px;
-      padding: 2px 9px;
+      border-radius: 2px; padding: 2px 9px;
     }
     .skill-tag.highlight {
       background: rgba(122,106,87,0.10);
       border: 1px solid rgba(122,106,87,0.40);
-      color: var(--accent-deep);
-      font-weight: 600;
+      color: var(--accent-deep); font-weight: 600;
     }
 
     .language-list { list-style: none; }
     .language-list li {
-      font-size: 0.9rem; color: var(--text);
+      font-size: 0.95rem; color: var(--text);
       margin-bottom: 7px;
       display: flex; justify-content: space-between;
     }
-    .language-level { color: var(--muted); font-size: 0.76rem; }
+    .language-level { color: var(--muted); font-size: 0.8rem; }
 
+    /* ── Main ── */
     .main {
       padding: 44px 46px 40px;
       background-color: var(--bg);
@@ -149,31 +140,27 @@
       overflow: hidden;
     }
 
-    .section { margin-bottom: 30px; counter-increment: section-counter; }
+    .section { margin-bottom: 28px; counter-increment: section-counter; }
 
     .section-label {
       font-size: 0.65rem; font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
+      color: var(--muted); letter-spacing: 0.14em;
+      text-transform: uppercase; margin-bottom: 4px;
     }
     .section-label::before { content: "0" counter(section-counter) " /  "; }
 
     .section-heading {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.55rem; font-weight: 500;
-      color: var(--heading);
-      letter-spacing: 0.04em;
-      margin-bottom: 14px;
-      padding-bottom: 9px;
+      color: var(--heading); letter-spacing: 0.04em;
+      margin-bottom: 14px; padding-bottom: 9px;
       border-bottom: 1px solid var(--line);
     }
 
+    /* ── Experience timeline ── */
     .experience-list {
       border-left: 1px solid var(--line);
-      margin-left: 6px;
-      padding-left: 22px;
+      margin-left: 6px; padding-left: 22px;
     }
     .experience-item { position: relative; }
     .experience-item::before {
@@ -195,16 +182,18 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem; font-weight: 600; color: var(--heading);
     }
-    .exp-date { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
+    .exp-date { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
     .exp-title-role {
-      font-size: 0.83rem; font-weight: 500;
-      color: var(--accent); margin-bottom: 12px;
+      font-size: 0.875rem; font-weight: 500;
+      color: var(--accent); margin-bottom: 11px;
     }
 
+    /* 12pt = 16px = 1rem */
     .exp-bullets { list-style: none; padding: 0; }
     .exp-bullets li {
-      font-size: 0.975rem; line-height: 1.8;
-      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.78;
+      margin-bottom: 9px;
       padding-left: 14px; position: relative; color: var(--text);
     }
     .exp-bullets li::before {
@@ -220,9 +209,10 @@
       font-size: 1.1rem; font-weight: 600;
       color: var(--heading); margin-bottom: 2px;
     }
-    .edu-degree { font-size: 0.95rem; color: var(--text); }
-    .edu-date   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .edu-degree { font-size: 1rem; color: var(--text); }
+    .edu-date   { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
 
+    /* ── Print ── */
     @media print {
       body { background: white; padding: 0; }
       .resume { width: 210mm; height: 297mm; box-shadow: none; }
