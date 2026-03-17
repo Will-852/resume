@@ -184,6 +184,11 @@
       letter-spacing: 0.01em;
     }
 
+    .skill-tag.highlight {
+      background: rgba(139,125,107,0.15);
+      font-weight: 500;
+    }
+
     .language-list {
       list-style: none;
     }
@@ -215,16 +220,11 @@
     .section:nth-child(1) { animation-delay: 0.1s; }
     .section:nth-child(2) { animation-delay: 0.2s; }
     .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .section-heading {
@@ -304,6 +304,46 @@
       background-color: var(--muted);
     }
 
+    /* ── Projects ── */
+    .project-item {
+      margin-bottom: 28px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .project-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--heading);
+    }
+
+    .project-link {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .project-link:hover {
+      border-bottom-color: var(--muted);
+    }
+
+    .project-stack {
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
     .edu-item {
       margin-bottom: 16px;
     }
@@ -329,77 +369,36 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .resume {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        padding: 40px 28px 32px;
-      }
-
+      .resume { grid-template-columns: 1fr; }
+      .sidebar { padding: 40px 28px 32px; }
       .sidebar::after {
-        width: 100%;
-        height: 1px;
-        top: auto;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(
-          to right,
-          transparent 5%,
-          var(--line) 20%,
-          var(--line) 80%,
-          transparent 95%
-        );
+        width: 100%; height: 1px;
+        top: auto; bottom: 0; right: 0;
+        background: linear-gradient(to right, transparent 5%, var(--line) 20%, var(--line) 80%, transparent 95%);
       }
-
-      .main {
-        padding: 36px 28px 40px;
-      }
-
-      .exp-header {
-        flex-direction: column;
-        gap: 2px;
-      }
+      .main { padding: 36px 28px 40px; }
+      .exp-header { flex-direction: column; gap: 2px; }
     }
 
     /* ── Print ── */
     @media print {
-      body {
-        background: white;
-        font-size: 11pt;
-      }
-
+      body { background: white; font-size: 11pt; }
       .resume {
         grid-template-columns: 32% 68%;
         max-width: 100%;
         box-shadow: none;
         min-height: auto;
       }
-
       .sidebar {
         background-color: #f5f2ee;
         padding: 32px 24px;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-
-      .main {
-        padding: 32px 36px;
-      }
-
-      .section {
-        animation: none;
-        break-inside: avoid;
-      }
-
-      .section-heading {
-        break-after: avoid;
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--text);
-      }
+      .main { padding: 32px 36px; }
+      .section { animation: none; break-inside: avoid; }
+      .section-heading { break-after: avoid; }
+      a { text-decoration: none; color: var(--text); }
     }
   </style>
 </head>
@@ -417,7 +416,6 @@
         <h2 class="sidebar-heading">Contact</h2>
         <ul class="contact-list">
           <li>Hong Kong</li>
-          <li>5599 5267</li>
           <li><a href="mailto:will678qwe@gmail.com">will678qwe@gmail.com</a></li>
           <li><a href="https://github.com/Will-852" target="_blank" rel="noopener">github.com/Will-852</a></li>
         </ul>
@@ -425,6 +423,18 @@
 
       <div class="sidebar-section">
         <h2 class="sidebar-heading">Skills</h2>
+
+        <div class="skill-group">
+          <div class="skill-group-title">AI &amp; Development</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">RAG Pipeline</span>
+            <span class="skill-tag highlight">LoRA Fine-tuning</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">LLM Workflows</span>
+            <span class="skill-tag">Claude Code</span>
+            <span class="skill-tag">Cursor</span>
+          </div>
+        </div>
 
         <div class="skill-group">
           <div class="skill-group-title">Marketing &amp; Advertising</div>
@@ -454,22 +464,11 @@
         </div>
 
         <div class="skill-group">
-          <div class="skill-group-title">AI &amp; Tech</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Claude Code</span>
-            <span class="skill-tag">Cursor</span>
-            <span class="skill-tag">LLM Workflows</span>
-            <span class="skill-tag">Python</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
           <div class="skill-group-title">Tools</div>
           <div class="skill-tags">
             <span class="skill-tag">MS Office</span>
             <span class="skill-tag">Notion</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">Java</span>
+            <span class="skill-tag">HTML / CSS</span>
           </div>
         </div>
       </div>
@@ -499,7 +498,7 @@
       <section class="section">
         <h2 class="section-heading">Profile</h2>
         <p class="profile-text">
-          A self-driven and adaptable marketing professional with 3 years of hands-on experience across retail, e-commerce, and digital advertising. Quick to learn and fast to execute — from running Meta &amp; Google Ads campaigns to managing online storefronts and leveraging the latest AI tools. Thrives in fast-paced environments and brings both creative thinking and practical execution to every role.
+          Marketing professional with 3 years of hands-on e-commerce and digital advertising experience, now building at the intersection of AI and business operations. Shipped production tools using Python and Claude AI — including a live crypto trading bot and an offline invoice system used in daily retail operations. Currently deepening expertise in RAG pipelines and LoRA fine-tuning to build domain-specific AI systems. Comfortable owning a project end-to-end: from campaign strategy to writing and deploying the code behind it.
         </p>
       </section>
 
@@ -512,12 +511,41 @@
           </div>
           <div class="exp-title-role">E-commerce &amp; Marketing Coordinator · Hong Kong</div>
           <ul class="exp-bullets">
-            <li>Delivered front-line customer service, maintaining high satisfaction standards in a fast-paced retail environment</li>
-            <li>Managed warehouse inventory and stock operations, ensuring accurate records and efficient fulfilment</li>
-            <li>Planned and executed digital marketing campaigns via Meta Ads and Google Ads, driving online traffic and sales</li>
-            <li>Operated and maintained e-commerce storefronts on Shopify and Shopline — including product listings, page design, and daily platform management</li>
-            <li>Produced product photography and promotional visual content for online channels</li>
-            <li>Leveraged AI tools (Cursor, Claude Code, LLM workflows) to streamline operational efficiency</li>
+            <li>Planned and executed digital marketing campaigns across Meta Ads and Google Ads, managing full campaign lifecycle from targeting and creative to reporting and optimisation</li>
+            <li>Operated and grew e-commerce storefronts on Shopify and Shopline — owning product listings, page design, promotional scheduling, and day-to-day platform management</li>
+            <li>Produced product photography and visual content for online channels, maintaining consistent brand presentation across platforms</li>
+            <li>Built and deployed an internal invoice and order management tool (HTML/JS) to replace manual processes, cutting invoicing time significantly for the team</li>
+            <li>Applied AI tools (Claude Code, Cursor, LLM workflows) to automate repetitive operational tasks, improving team efficiency across marketing and fulfilment workflows</li>
+            <li>Managed warehouse inventory and stock operations, maintaining accurate records and supporting smooth order fulfilment</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">Projects</h2>
+
+        <div class="project-item">
+          <div class="project-header">
+            <span class="project-name">AXC Trading Bot</span>
+            <a href="https://github.com/Will-852/AXC-TradingBot" target="_blank" rel="noopener" class="project-link">github.com/Will-852/AXC-TradingBot</a>
+          </div>
+          <div class="project-stack">Python · Claude AI · Telegram Bot API · RAG</div>
+          <ul class="exp-bullets">
+            <li>Built a live crypto trading system with real-time signal analysis, automated trade execution, and Telegram-based control interface</li>
+            <li>Integrated Claude AI for market interpretation and trade decision support; applying RAG architecture to incorporate evolving market context into model reasoning</li>
+            <li>Designed modular architecture covering signal ingestion, risk management, and order routing — running as a persistent background service</li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <span class="project-name">HDC Invoice System</span>
+            <a href="https://github.com/Will-852/hdc-invoice" target="_blank" rel="noopener" class="project-link">github.com/Will-852/hdc-invoice</a>
+          </div>
+          <div class="project-stack">HTML · JavaScript · CSS · Excel Export</div>
+          <ul class="exp-bullets">
+            <li>Built a zero-dependency offline invoice generator for Shopline/Shopify merchants — no server, no install, runs entirely in the browser</li>
+            <li>Supports CSV order import, customer database, print-ready layout, and Excel export; deployed and actively used in retail operations at Home Decor Centre</li>
           </ul>
         </div>
       </section>
